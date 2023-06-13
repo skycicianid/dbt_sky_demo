@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: skyita-da-daita-prod_broadcasting_management
+    schema: broadcasting_management
+    database: skyita-da-daita-prod
+    tables:
+      - name: catalogue_linear
+        description: 'catalogue_linear docs...'
+  - name: skyita-da-daita-prod_broadcasting_management_snapshot
+    schema: broadcasting_management_snapshot
+    database: skyita-da-daita-prod
+    tables:
+      - name: catalogue_linear_daily
+        description: 'order_salesforce docs...'
+
+models:
+  - name: catalogue_linear_daily_tmp
+    description: catalogue_linear_daily docs...

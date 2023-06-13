@@ -1,0 +1,44 @@
+version: 2
+
+sources:
+  - name: skyita-da-daita-prod_cti
+    schema: cti
+    database: skyita-da-daita-prod
+    tables:
+      - name: ivr_navigation
+        description: 'ivr_navigation docs...'
+      - name: cti_que_tracking
+        description: 'cti_que_tracking docs...'
+
+  - name: skyita-da-daita-prod_order_management
+    schema: order_management
+    database: skyita-da-daita-prod
+    tables:
+      - name: order_salesforce
+        description: 'order_salesforce docs...'
+  
+   
+  - name: skyita-da-daita-prod_operational_support
+    schema: operational_support
+    database: skyita-da-daita-prod
+    tables:
+      - name: oss_orders
+        description: 'oss_orders docs...'
+        
+  - name: skyita-da-daita-prod_cti_enriched
+    schema: cti_enriched
+    database: skyita-da-daita-prod
+    tables:
+      - name: ivr_4th_contact_point_kpis_daily
+        description: 'ivr_4th_contact_point_kpis_daily docs...'
+
+models:
+  - name: ivr_4th_contact_point_kpis_daily
+    description: The structure is dedicated to the navigation of the IVR Sky Quarto Referente di Fulfillment service. The table has call level granularity and cardinality corresponding to the number of calls to the Quarto Referente di Fulfillment IVR service.
+    columns:
+      - name: id_conn
+        description: id_conn is the primary key
+        tests:
+          - unique
+          - not_null
+    

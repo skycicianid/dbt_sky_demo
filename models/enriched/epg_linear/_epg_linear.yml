@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: skyita-da-composer-prod_ovp_elementary_data
+    schema: ovp_elementary_data
+    database: skyita-da-composer-prod
+    tables:
+      - name: transcode_genre
+        description: 'transcode_genre docs...'
+
+models:
+  - name: epg_linear_schedule_tmp
+    description: table for EPG linear schedule in viewership. | Epic https://agile.at.sky/browse/DPAEP-653 | DM Simone Villarà
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - service_key
+            - id_genre
+            - id_subgenre
+    

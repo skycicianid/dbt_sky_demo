@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: skyita-da-daita-prod_agenda_management
+    schema: agenda_management
+    database: skyita-da-daita-prod
+    tables:
+      - name: agenda_management
+        description: 'agenda_management docs...'
+      - name: agenda_management_forecast
+        description: 'agenda_management_forecast docs...'
+
+  - name: skyita-da-daita-prod_agenda_snapshot
+    schema: agenda_snapshot
+    database: skyita-da-daita-prod
+    tables:
+      - name: agenda_management_daily
+        description: 'agenda_management_daily docs...'
+      - name: agenda_management_forecast_daily
+        description: 'agenda_management_forecast_daily docs...'
+
+models:
+  - name: agenda_management_daily
+    description: catalogue_linear_daily docs...
+
+  - name: agenda_management_forecast_daily
+    description: agenda_management_forecast_daily docs...
